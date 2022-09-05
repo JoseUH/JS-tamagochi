@@ -15,82 +15,44 @@ sleep$$.textContent = tamagochi.sleep;
 exercise$$.textContent = tamagochi.exercise;
 
 const comer=() =>{
-  if ((img$$.classList = "normal")) {
-    img$$.classList.remove("normal");
-    img$$.classList.add("merienda");
-  }
-  if ((img$$.classList = "ejercicio")) {
-    img$$.classList.remove("ejercicio");
-    img$$.classList.add("merienda");
-  }
-  if ((img$$.classList = "descansar")) {
-    img$$.classList.remove("descansar");
-    img$$.classList.add("merienda");
-  }
-  if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
-    img$$.classList.remove("merienda");
-    img$$.classList.add("falta");
-}
   
+  img$$.className="merienda"
   tamagochi.eat +=10;
   tamagochi.exercise-=10
   eat$$.textContent = tamagochi.eat;
   sleep$$.textContent = tamagochi.sleep;
   exercise$$.textContent = tamagochi.exercise;
-
+ if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
+    img$$.classList.remove("merienda");
+    img$$.classList.add("falta");
+}
  }
 
  const correr=() =>{
-  if ((img$$.classList = "normal")) {
-    img$$.classList.remove("normal");
-    img$$.classList.add("ejercicio");
-  }
-  if ((img$$.classList = "merienda")) {
-    img$$.classList.remove("merienda");
-    img$$.classList.add("ejercicio");
-  }
-  if ((img$$.classList = "descansar")) {
-    img$$.classList.remove("descansar");
-    img$$.classList.add("ejercicio");
-  }
-  if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
-    img$$.classList.remove("ejercicio");
-    img$$.classList.add("falta");
-}
-
+  img$$.className="ejercicio"
   tamagochi.eat -=10;
   tamagochi.sleep +=10;
   tamagochi.exercise+=10
   eat$$.textContent = tamagochi.eat;
   sleep$$.textContent = tamagochi.sleep;
   exercise$$.textContent = tamagochi.exercise;
-
+if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
+    img$$.classList.remove("ejercicio");
+    img$$.classList.add("falta");
+}
  }
 
  const dormir=() =>{
-  if ((img$$.classList = "normal")) {
-    img$$.classList.remove("normal");
-    img$$.classList.add("descansar");
-  }
-  if ((img$$.classList = "ejercicio")) {
-    img$$.classList.remove("ejercicio");
-    img$$.classList.add("descansar");
-  }
-  if ((img$$.classList = "merienda")) {
-    img$$.classList.remove("merienda");
-    img$$.classList.add("descansar");
-  }
-  if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
-    img$$.classList.remove("descansar");
-    img$$.classList.add("falta");
-}
-
+  img$$.className="descansar"
   tamagochi.eat +=10;
   tamagochi.sleep -=10;
   tamagochi.exercise-=10
   eat$$.textContent = tamagochi.eat;
   sleep$$.textContent = tamagochi.sleep;
   exercise$$.textContent = tamagochi.exercise;
-
+if(tamagochi.eat <=0||tamagochi.exercise<=0 ||tamagochi.sleep<=0){
+    img$$.classList.remove("descansar");
+    img$$.classList.add("falta");
+}
  }
 
